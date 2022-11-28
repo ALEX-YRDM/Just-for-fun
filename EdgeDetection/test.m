@@ -2,14 +2,13 @@
 clc;clear;
 
 %% 获取原视频帧数据
-path='kunkun.mp4';    %原视频存放路径
+path='kunkun.mp4';    %原视频存放路径,相对路径和绝对路径均可
 obji=VideoReader(path);
 num=obji.NumFrames; %获取视频帧数
 disp(['总图片帧数为：',num2str(num)])
 
 %% 创建视频对象并打开
-%% 替换xxx为想要转换的视频,绝对路径和相对路径均可
-Wobj=VideoWriter('xxx', 'MPEG-4');   
+Wobj=VideoWriter('test.mp4', 'MPEG-4');   % 确定输出视频的文件名为test.mp4
 %输出视频，mp4格式合成的视频较小，如果想更高清可以改为avi格式，只需将'MPEG-4'改为'Uncompressed AVI'
 open(Wobj);
 
